@@ -1,7 +1,35 @@
-<script setup></script>
-
 <template>
-  <div class="bg-blue-500 text-white p-4">Hello Tailwind v4!</div>
+  <RouterView />
 </template>
 
-<style scoped></style>
+<script setup>
+import { RouterView } from 'vue-router'
+</script>
+
+<style>
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>
